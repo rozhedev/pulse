@@ -1,0 +1,31 @@
+// Например
+
+@font-face {
+    font-family: "Museo Sans Cyrl";
+    font-display: swap;
+    src: local("O"), url("../fonts/MuseoSansCyrl_300.ttf") format("truetype"),
+        url("../../dist/fonts/MuseoSansCyrl_300.woff") format("woff"),
+        url("../../dist/fonts/MuseoSansCyrl_300.woff2") format("woff2");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Museo Sans Cyrl";
+    font-display: swap;
+    src: local("O"), url("../fonts/MuseoSansCyrl_500.ttf") format("truetype"),
+        url("../../dist/fonts/MuseoSansCyrl_500.woff") format("woff"),
+        url("../../dist/fonts/MuseoSansCyrl_500.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Museo Sans Cyrl";
+    font-display: swap;
+    src: local("O"), url("../fonts/MuseoSansCyrl_700.ttf") format("truetype"),
+        url("../../dist/fonts/MuseoSansCyrl_700.woff") format("woff"),
+        url("../../dist/fonts/MuseoSansCyrl_700.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+}

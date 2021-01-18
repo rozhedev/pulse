@@ -1,0 +1,14 @@
+@import "_variables.scss";
+
+@mixin btnStyle {
+    border-radius: 5px;
+    background-color: $btnColor;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 400;
+    &:hover {
+        color: $btnColor;
+        background-color: #ffffff;
+        transition: linear .5s all;
+    }
+}
