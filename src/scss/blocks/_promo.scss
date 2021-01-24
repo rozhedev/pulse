@@ -17,6 +17,7 @@
         font-size: 44px;
         font-weight: 700;
         line-height: 44px;
+        text-transform: uppercase;
     }
     &__subtitle {
         margin-top: 17px;
@@ -55,8 +56,51 @@
 
             &:hover {
                 text-decoration: none;
-                transition: .5s all linear;
+                transition: 0.5s all linear;
             }
+        }
+    }
+}
+
+@media (max-width: 769px) {
+    .promo {
+        &__wrapper {
+            padding-right: 30px;
+        }
+        &__title {
+            font-size: 38px;
+            line-height: 38px;
+        }
+        &__subtitle {
+            font-size: 18px;
+        }
+        &__content {
+            width: 400px;
+            margin-top: 55px;
+        }
+        .promo__link {
+            font-size: 15px;
+        }
+    }
+}
+
+@media (max-width: 426px) {
+    .promo {
+        &__wrapper{
+            padding-right: 0;
+            align-items: center;
+            margin-top: 55px;
+        }
+        &__title {
+            font-size: 32px;
+            line-height: 32px;
+        }
+        &__subtitle {
+            font-size: 15px;
+        }
+        &__content {
+            width: 355px;
+            margin-top: 40px;
         }
     }
 }

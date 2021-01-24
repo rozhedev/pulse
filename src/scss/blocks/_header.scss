@@ -37,3 +37,42 @@ body {
         display: block;
     }
 }
+
+@media (max-width: 769px) {
+    .header {
+        &__logo {
+            img {
+                width: 90%;
+            }
+        }
+        &__phone-num {
+            font-size: 16px;
+        }
+        &__official {
+            span {
+                font-size: 17px;
+            }
+        }
+    }
+}
+
+@media (max-width: 426px) {
+    .header {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 200px;
+
+        &__official {
+            font-size: 16px;
+            span {
+                font-size: 20px;
+                margin-top: 8px;
+            }
+        }
+        &__phone-num {
+            font-size: 18px;
+        }
+    }
+}

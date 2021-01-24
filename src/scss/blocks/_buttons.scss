@@ -11,3 +11,36 @@
     margin-top: 68px;
     font-size: 16px;
 }
+
+.btn--feed {
+    width: 300px;
+    height: 55px;
+    font-size: 16px;
+}
+
+@media (max-width: 769px) {
+    .btn--main {
+        width: 250px;
+        font-size: 15px;
+        margin-top: 55px;
+    }
+    .button--header {
+        width: 140px;
+        height: 25px;
+        font-size: 11px;
+        margin-top: 5px;
+    }
+}
+
+@media (max-width: 426px) {
+    .button--header {
+        width: 155px;
+        height: 32px;
+        font-size: 13px;
+        margin-top: 8px;
+    }
+    .btn--main {
+        width: 240px;
+        margin-top: 45px;
+    }
+}
