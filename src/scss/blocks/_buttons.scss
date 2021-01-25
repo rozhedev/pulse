@@ -18,6 +18,15 @@
     font-size: 16px;
 }
 
+.btn--little {
+    width: 131px;
+    height: 40px;
+
+    &:hover {
+        border: 1px solid $btnColor;
+    }
+}
+
 @media (max-width: 769px) {
     .btn--main {
         width: 250px;
@@ -42,5 +51,11 @@
     .btn--main {
         width: 240px;
         margin-top: 45px;
+    }
+}
+
+@media (max-width: 321px) {
+    .btn--main {
+        margin-top: 20px;
     }
 }

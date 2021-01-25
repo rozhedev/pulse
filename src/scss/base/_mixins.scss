@@ -9,6 +9,15 @@
     &:hover {
         color: $btnColor;
         background-color: #ffffff;
-        transition: linear .5s all;
+        transition: linear 0.4s all;
+    }
+}
+
+@mixin linkStyle {
+    text-decoration: underline;
+    text-transform: uppercase;
+    &:hover {
+        text-decoration: none;
+        transition: 0.4s all linear;
     }
 }
