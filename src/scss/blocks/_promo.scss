@@ -84,7 +84,7 @@
         &__wrapper {
             padding-right: 0;
             align-items: center;
-            margin-top: 50px;
+            margin-top: 45px;
         }
         &__title {
             font-size: 27px;
@@ -103,6 +103,9 @@
 
 @media (max-width: 321px) {
     .promo {
+        &__wrapper {
+            margin-top: 40px;
+        }
         &__title {
             font-size: 23px;
             line-height: 23px;

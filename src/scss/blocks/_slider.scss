@@ -39,7 +39,7 @@
             width: 15px;
             height: 15px;
             border-radius: 50%;
-        }   
+        }
         li.slick-active button {
             background-color: #000000;
         }
@@ -64,5 +64,12 @@
     .slider {
         padding: 60px 0;
         min-height: 400px;
+    }
+}
+
+@media (max-width: 321px) {
+    .slider {
+        min-height: 350px;
+        padding: 50px 0;
     }
 }

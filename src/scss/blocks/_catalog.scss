@@ -181,12 +181,12 @@
 
 @media (max-width: 426px) {
     .catalog {
-        padding-bottom: 65px;
+        padding-bottom: 60px;
 
         &__tabs {
             flex-direction: column;
             align-items: center;
-            margin-top: 45px;
+            margin-top: 40px;
         }
         &__tab {
             margin: 10px 0;
@@ -199,3 +199,10 @@
         }
     }
 }
+
+@media (max-width: 321px) {
+    .catalog {
+        padding-bottom: 50px;
+    }
+}
+

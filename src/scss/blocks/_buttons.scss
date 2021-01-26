@@ -50,12 +50,16 @@
     }
     .btn--main {
         width: 240px;
-        margin-top: 45px;
+        margin-top: 40px;
     }
 }
 
 @media (max-width: 321px) {
     .btn--main {
         margin-top: 20px;
+    }
+    .btn--feed {
+        width: 250px;
+        height: 45px;
     }
 }

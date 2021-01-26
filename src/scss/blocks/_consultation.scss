@@ -30,7 +30,8 @@
 
 @media (max-width: 426px) {
     .consultation {
-        padding: 75px 0 60px;
+        min-height: 550px;
+        padding: 50px 0 30px;
         text-align: center;
 
         &__wrapper {
@@ -46,6 +47,19 @@
         &__title--wh {
             text-align: center;
             font-size: 22px;
+        }
+    }
+}
+
+@media (max-width: 321px) {
+    .consultation {
+        min-height: 500px;
+
+        &__title--wh {
+            font-size: 19px;
+        }
+        &__text {
+            margin: 30px 0 20px;
         }
     }
 }
