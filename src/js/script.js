@@ -1,5 +1,7 @@
 // @@include('alert.js');
 
+// SLIDER
+
 $(document).ready(function () {
     $('.slider__wrapper').slick({
         speed: 700,
@@ -17,6 +19,8 @@ $(document).ready(function () {
             }
         ]
     });
+
+    // TABS
 
     $('ul.catalog__tabs').on('click', 'li:not(.catalog__tab--active)', function () {
         $(this)
@@ -36,4 +40,92 @@ $(document).ready(function () {
 
     toggleClass('.catalog-item__link');
     toggleClass('.catalog-item__back');
+
+    // MODAL
+
+    $('[data-modal=consult-form').on('click', function () {
+        $('.overlay, #consult-form').fadeIn();
+    });
+
+    $('.modal__close').on('click', function () {
+        $('.overlay, #consult-form, #thanks, #order').fadeOut()
+    });
+
+    $('.btn--little').each(function (i) {
+        $(this).on('click', function () {
+            $('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text());
+            $('.overlay, #order').fadeIn();
+        })
+    });
+
+    // VALIDATOR & PHONE MASK
+
+    function validateForm(form) {
+        $(form).validate({
+            rules: {
+                name: {
+                    required: true,
+                    minlength: 2,
+                },
+                phone: "required",
+                email: {
+                    required: true,
+                    email: true,
+                }
+            },
+            messages: {
+                name: {
+                    required: "Пожалуйста, введите свое имя",
+                    minlength: jQuery.validator.format("Введите не меньше {0} символов"),
+                },
+                phone: "Пожалуйста, введите свой номер телефона",
+                email: {
+                    required: "Пожалуйста, введите свою почту",
+                    email: "Неправильно введен почтовый адрес"
+                }
+            }
+        });
+    }
+
+    validateForm('#consult-form form');
+    validateForm('#section-form');
+    validateForm('#order form');
+
+    $('input[name=phone]').mask("+7 (999) 999-99-99");
+
+    // SEND FORM
+
+    $('form').submit(function (e) {
+        e.preventDefault();
+        $.ajax({
+            type: "POST",
+            url: "php/smart.php",
+            data: $(this).serialize()
+        }).done(function () {
+            $(this).find("input").val("");
+            // $('.overlay', '#thanks').fadeIn('slow');
+
+            $('form').trigger('reset');
+        });
+        return false;
+    });
+
+    // SMOOTH LOAD & PAGE UP
+
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 1500) {
+            $('.pageup').fadeIn();
+        }
+        else {
+            $('.pageup').fadeOut();
+        }
+    });
+
+    $("a[href=#up]").click(function () {
+        const _href = $(this).attr("href");
+        $("html, body").animate({ scrollTop: $(_href).offset().top + "px" });
+        return false;
+    });
+
+    new WOW().init();
 });

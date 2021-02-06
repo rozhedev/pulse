@@ -7,10 +7,18 @@
 
     &__item {
         max-width: 245px;
+
     }
 
     &__content {
         margin-top: 65px;
+    }
+
+    &__img--animated {
+        animation: heardbeat 1s linear infinite paused alternate;
+        &:hover {
+            animation-play-state: running;
+        }
     }
 
     &__item-title {

@@ -31,6 +31,9 @@
             background-color: $btnColor;
             color: #ffffff;
             border: none;
+            &:hover {
+                box-shadow: none;
+            }
         }
     }
     &__content {
