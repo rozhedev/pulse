@@ -43,6 +43,37 @@
 }
 
 #consultation,
-#order, #thanks {
+#order,
+#thanks {
     display: none;
+}
+
+@media (max-width: 426px) {
+    .modal {
+        width: 300px;
+        padding: 20px;
+        top: calc(50% - 200px);
+        left: calc(50% - 150px);
+
+        &__close {
+            right: -25px;
+            font-size: 30px;
+            line-height: 15px;
+        }
+    }
+}
+
+@media (max-width: 321px) {
+    .modal {
+        width: 260px;
+        padding: 20px;
+        top: calc(50% - 200px);
+        left: calc(50% - 130px);
+
+        &__close {
+            right: -20px;
+            font-size: 26px;
+            line-height: 13px;
+        }
+    }
 }

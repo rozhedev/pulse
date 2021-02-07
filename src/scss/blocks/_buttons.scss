@@ -52,6 +52,10 @@
         width: 240px;
         margin-top: 40px;
     }
+    .btn--feed {
+        width: 260px;
+        height: 45px;
+    }
 }
 
 @media (max-width: 321px) {
@@ -59,7 +63,8 @@
         margin-top: 20px;
     }
     .btn--feed {
-        width: 250px;
-        height: 45px;
+        width: 220px;
+        height: 40px;
+        font-size: 14px;
     }
 }
