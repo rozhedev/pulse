@@ -1,18 +1,18 @@
 // Components
-
-@import "base/nullstyle.scss";
-@import "base/fonts.scss";
-@import "base/_common.scss";
+@import "base/slick";
+@import "base/nullstyle";
+@import "base/fonts";
+@import "base/common";
 
 // Blocks
 
-@import "blocks/_buttons";
-@import "blocks/_header";
-@import "blocks/_promo";
-@import "blocks/_about";
-@import "blocks/_consultation";
-@import "blocks/_slider";
-@import "blocks/_catalog";
-@import "blocks/_reviews";
-@import "blocks/_footer";
-@import "blocks/_modal";
+@import "blocks/buttons";
+@import "blocks/header";
+@import "blocks/promo";
+@import "blocks/about";
+@import "blocks/consultation";
+@import "blocks/slider";
+@import "blocks/catalog";
+@import "blocks/reviews";
+@import "blocks/footer";
+@import "blocks/modal";
