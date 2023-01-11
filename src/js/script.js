@@ -1,8 +1,6 @@
-// @@include('alert.js');
-
-// SLIDER
-
 $(document).ready(function () {
+    // SLIDER
+
     $('.slider__wrapper').slick({
         speed: 700,
         autoplay: true,
