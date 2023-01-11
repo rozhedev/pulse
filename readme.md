@@ -1,6 +1,9 @@
 # Pulse
 
+Educational work from this [course](https://www.udemy.com/course/webdeveloper/)
+
 It’s the sports watch store page. 
+
 Consists of 7 sections and has 3 adaptive versions.
 
 Features:
