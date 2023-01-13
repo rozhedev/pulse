@@ -1,0 +1,26 @@
+[
+    {
+        "isAnimated": "",
+        "animDelay": ".1s",
+        "imgPath": "img/features/cup.png",
+        "imgAlt": "cup",
+        "title": "Делимся опытом",
+        "descr": "Наши сотрудники всегда готовы поделиться своим опытом, так как сами бегают полумарафоны, переплыли Босфор, готовятся к соревнованиям по триатлону!"
+    },
+    {
+        "isAnimated": "about__img--animated",
+        "animDelay": ".2s",
+        "imgPath": "img/features/heart.png",
+        "imgAlt": "heart",
+        "title": "Заботимся о здоровье",
+        "descr": "Мы работаем для того, чтобы Ваши занятия спортом шли на пользу Вашему здоровью и были в радость Вам и Вашим близким!"
+    },
+    {
+        "isAnimated": "",
+        "animDelay": ".3s",
+        "imgPath": "img/features/shoe.png",
+        "imgAlt": "shoe",
+        "title": "Учим бегать",
+        "descr": "Помогаем с обучением правильной технике бега! Дружим с крупнейшей школой бега в России - <a href='#' class='about__text--red'>I LOVE RUNNING .</a>"
+    }
+]

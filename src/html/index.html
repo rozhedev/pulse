@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pulse</title>
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+    <section class="promo" id="up">
+        <div class="container">
+            @@include('components/_header.html')
+
+            <div class="promo__wrapper">
+                <h1 class="promo__title">Подбор пульсометра
+                </h1>
+                <h2 class="promo__subtitle">с учётом Вашего уровня подготовки</h2>
+                <div class="row promo__content">
+                    @@loop("components/_promo-item.html", "../json/promo-items.json")
+                </div>
+                <button class="button btn--main" data-modal="consult-form">заказать консультацию</button>
+                <div class="promo__link">или <a href="#catalog">ПЕРЕЙТИ В КАТАЛОГ</a></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- * ABOUT -->
+
+    <section class="about">
+        <div class="container">
+            <div class="about__wrapper">
+                <h2 class="title">НАШИ ПРЕИМУЩЕСТВА</h2>
+                <div class="row about__content">
+                    @@loop("components/_about-item.html", "../json/about-items.json")
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- * CONSULT. FORM & SLIDER -->
+
+    <section class="consultation">
+        <div class="container">
+            <div class="consultation__wrapper">
+                <h2 class="title consultation__title--wh">Получите бесплатную консультацию <br>
+                    по подбору пульсометра </h2>
+                <div class="consultation__text">Просто заполните форму заявки <br>
+                    и мы перезвоним вам в течении 10 минут</div>
+                <form action="#" class="feed-form" id="section-form">
+                    <!-- Don't exact component, because phone mask will not work -->
+                    <input type="text" required name="name" id="client-name" placeholder="Ваше имя">
+                    <input type="tel" name="phone" required id="client-tel" placeholder="Ваш телефон">
+                    <input type="email" required name="email" id="input-email" placeholder="Ваш E-mail">
+                    <button class="button btn--feed">заказать кОНСУЛЬТАЦИЮ</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <div class="slider">
+        <div class="container">
+            <div class="slider__wrapper">
+                @@loop("components/_slider-item.html", "../json/slider-items.json")
+            </div>
+        </div>
+    </div>
+
+    <!-- * CATALOG -->
+
+    <section class="catalog" id="catalog">
+        <div class="container">
+            <h2 class="title">Каталог пульсометров</h2>
+            <ul class="catalog__tabs">
+                <!-- Don't exact component, because phone mask will not work -->
+                <li class="catalog__tab catalog__tab--active">
+                    <div>Для фитнеса</div>
+                </li>
+                <li class="catalog__tab">
+                    <div>Для бега</div>
+                </li>
+                <li class="catalog__tab">
+                    <div>Для триатлона</div>
+                </li>
+            </ul>
+
+            <div class="catalog__content catalog__content--active">
+                @@loop("components/_catalog-item.html", "../json/catalog/catalog-items-fitness.json")
+            </div>
+            <div class="catalog__content">
+                @@loop("components/_catalog-item.html", "../json/catalog/catalog-items-run.json")
+            </div>
+            <div class="catalog__content">
+                @@loop("components/_catalog-item.html", "../json/catalog/catalog-items-triatlon.json")
+            </div>
+        </div>
+    </section>
+
+    <!-- * REWIEWS -->
+
+    <section class="reviews">
+        <div class="container">
+            <h2 class="title">отзывы клиентов</h2>
+            <div class="reviews__content">
+                @@loop("components/_review-item.html", "../json/review-items.json")
+            </div>
+        </div>
+
+    </section>
+
+    @@include('components/_footer.html')
+
+    <!-- Modal -->
+
+    <div class="overlay">
+        <div class="modal" id="consult-form">
+            <div class="modal__close">&times;</div>
+            <div class="modal__subtitle">Просто заполните форму заявки</div>
+            <div class="modal__descr">и мы перезвоним вам в течении 10 минут</div>
+            <form action="#" class="feed-form">
+                <input type="text" name="name" id="input-name" placeholder="Ваше имя">
+                <input name="phone" id="input-tel" placeholder="Ваш телефон">
+                <input type="email" name="email" id="input-email" placeholder="Ваш E-mail">
+                <button class="button btn--feed">заказать консультацию</button>
+            </form>
+        </div>
+
+        <div class="modal" id="order">
+            <div class="modal__close">&times;</div>
+            <div class="modal__subtitle">Ваш заказ:</div>
+            <div class="modal__descr">Пульсометр Polar FT1</div>
+            <form action="#" class="feed-form">
+                <input type="text" name="name" id="input-name" placeholder="Ваше имя">
+                <input name="phone" id="input-tel" placeholder="Ваш телефон">
+                <input type="email" name="email" id="input-email" placeholder="Ваш E-mail">
+                <button class="button btn--feed">Купить</button>
+            </form>
+        </div>
+
+        <div class="modal modal--little" id="thanks">
+            <div class="modal__close">&times;</div>
+            <div class="modal__subtitle">Спасибо за вашу заявку!</div>
+            <div class="modal__descr">Наш менеджер свяжется с вами в ближайшее время!</div>
+        </div>
+    </div>
+
+    <a href="#up" class="pageup"><img src="img/up-arrow.svg" alt="up-arrow"></a>
+
+    <script src="https://kit.fontawesome.com/f77f4500aa.js" crossorigin="anonymous"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery-migrate-3.3.2.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/script.min.js"></script>
+</body>
+
+</html>

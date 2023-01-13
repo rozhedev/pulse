@@ -1,0 +1,17 @@
+[
+    {
+        "imgPath": "img/header/timer.png",
+        "imgAlt": "timer",
+        "title": "Время подбора: 10 минут"
+    },
+    {
+        "imgPath": "img/header/delivery.png",
+        "imgAlt": "delivery",
+        "title": "Бесплатная доставка"
+    },
+    {
+        "imgPath": "img/header/messages.png",
+        "imgAlt": "messages",
+        "title": "Ответим на все вопросы"
+    }
+]

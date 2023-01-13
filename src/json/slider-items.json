@@ -1,0 +1,14 @@
+[
+    {
+        "imgPath": "img/catalog/01.png",
+        "imgAlt": "clock1"
+    },
+    {
+        "imgPath": "img/catalog/02.png",
+        "imgAlt": "clock2"
+    },
+    {
+        "imgPath": "img/catalog/03.png",
+        "imgAlt": "clock3"
+    }
+]

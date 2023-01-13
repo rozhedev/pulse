@@ -38,6 +38,9 @@
         height: 1px;
         background-color: #f6f6f6;
         margin: 50px 0;
+        &:last-of-type {
+            height: 0;
+        }
     }
 }
 
