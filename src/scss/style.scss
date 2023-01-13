@@ -1,18 +1,24 @@
-// Components
-@import "base/slick";
+// LIBS
+
+@import "libs/slick";
+
+// BASE
+
 @import "base/nullstyle";
 @import "base/fonts";
+@import "base/vars";
+@import "base/mixins";
 @import "base/common";
 
-// Blocks
+// COMPONENTS
 
-@import "blocks/buttons";
-@import "blocks/header";
-@import "blocks/promo";
-@import "blocks/about";
-@import "blocks/consultation";
-@import "blocks/slider";
-@import "blocks/catalog";
-@import "blocks/reviews";
-@import "blocks/footer";
-@import "blocks/modal";
+@import "components/buttons";
+@import "components/header";
+@import "components/promo";
+@import "components/about";
+@import "components/consultation";
+@import "components/slider";
+@import "components/catalog";
+@import "components/reviews";
+@import "components/footer";
+@import "components/modal";
